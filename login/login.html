@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to SRM AgroLearning</title>
+    <script
+      src="https://kit.fontawesome.com/f2e55912f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../cursor/style.css" />
+    <link rel="stylesheet" href="../Scrollbar/scrollbar.css" />
+  </head>
+  <body>
+    <div id="progressBar"></div>
+    <script src="../Scrollbar/scrollbar.js"></script>
+    <header class="header">
+      <img
+        src="../icon.png"
+        alt="logo"
+        style="height: 50px; width: 50px; margin-right: 10px"
+      />
+      <a href="#" class="logo" style="margin-inline-end: auto"
+        ><h3>SRM AgroLearning</h3></a
+      >
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="../index.html" class="active"
+          ><i class="fa-solid fa-house"></i> Home</a
+        >
+        <a href="../about/about.html"
+          ><i class="fa-solid fa-circle-info"></i> About</a
+        >
+        <a href="../blog/blogpage.html" target="_self"
+          ><i class="fa-solid fa-blog"></i> Blogs</a
+        >
+        <a href="../index.html#Resource Library"
+          ><i class="fa-solid fa-book"></i> Resource Library</a
+        >
+        <a href="../FAQS/faqpage.html" target="_self"
+          ><i class="fas fa-question-circle"></i> FAQ</a
+        >
+        <a href="../index.html#contact" id="nav--contact"
+          ><i class="fa-solid fa-phone"></i> Contact</a
+        >
+      </nav>
+    </header>
+
+    <div class="container" id="container" style="margin-top: 100px">
+      <div class="form-container sign-up" id="signup-form">
+        <form id="signup-form">
+          <h1>Create Account</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><div class="mail" id="ma">
+                <i class="fa-brands fa-google-plus-g"></i></div
+            ></a>
+            <a href="#" class="icon"
+              ><div class="mail" id="gi">
+                <i class="fa-brands fa-github"></i></div
+            ></a>
+            <a href="#" class="icon"
+              ><div class="mail" id="li">
+                <i class="fa-brands fa-linkedin-in"></i></div
+            ></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input
+            type="text"
+            id="signup-name"
+            placeholder="Enter your Name"
+            required
+          />
+          <input
+            type="email"
+            id="signup-email"
+            placeholder="Enter your Email"
+            required
+          />
+          <div class="input-password">
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Enter Password"
+              required
+            />
+            <button type="button" id="toggle-signup-password">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="input-password">
+            <input
+              type="password"
+              id="signup-confirm-password"
+              placeholder="Re-Enter Password"
+              required
+            />
+            <button type="button" id="toggle-signup-confirm-password">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <span
+            id="signup-password-match-error"
+            style="color: red; display: none"
+            >Passwords don't match</span
+          >
+          <button type="submit" id="signup-button">Sign Up</button>
+          <div id="signup-success-banner" class="success-banner">
+            <p id="signup-banner-text">Signed up successfully</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-container sign-in" id="signin-form">
+        <form id="signin-form">
+          <h1>Sign In</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><div class="mail" id="ma">
+                <i class="fa-brands fa-google-plus-g"></i></div
+            ></a>
+            <a href="#" class="icon"
+              ><div class="mail" id="gi">
+                <i class="fa-brands fa-github"></i></div
+            ></a>
+            <a href="#" class="icon"
+              ><div class="mail" id="li">
+                <i class="fa-brands fa-linkedin-in"></i></div
+            ></a>
+          </div>
+          <span>or use your email password</span>
+          <input type="email" id="signin-email" placeholder="Email" required />
+          <div class="input-password">
+            <input
+              type="password"
+              id="signin-password"
+              placeholder="Password"
+              required
+            />
+            <button type="button" id="toggle-signin-password">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <a href="#forgot-password-form" id="forgot-password-link"
+            >Forget Your Password?</a
+          >
+          <button type="submit" id="signin-button">Sign In</button>
+          <div id="signin-success-banner" class="success-banner">
+            <p id="signin-banner-text">Signed in successfully</p>
+          </div>
+        </form>
+        <!-- <div class="outer-banner">
+          <div id="success-banner" class="success-banner" style="display: none">
+            <p id="banner-text"></p>
+          </div>
+        </div> -->
+        <div id="shared-success-banner" class="success-banner">
+          <p id="shared-banner-text">Shared banner message</p>
+        </div>
+      </div>
+
+      <div
+        class="form-container forgot-password-form"
+        id="forgot-password-form"
+      >
+        <form>
+          <h1 style="font-size: 30px">Forgot Password? No Worries!</h1>
+          <div>
+            <br />
+            <label style="color: black; font-size: medium"
+              >Enter your email to receive password reset link.</label
+            >
+            <input type="email" placeholder="Email" required />
+          </div>
+          <button type="reset">Send a mail</button>
+          <a href="#signin-form" id="back-to-login-page"> Back to Login page</a>
+        </form>
+      </div>
+
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1 style="color: white; padding: 20px">Welcome Back!</h1>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1 style="color: white; padding: 20px">Hello, Friend!</h1>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-title"><h2>AgriLearnNetwork</h2></div>
+        <div class="footer-icons">
+          <p><b>Follow us on our socials:</b></p>
+          <div class="socialIcons">
+            <a
+              id="mail"
+              href="mailto:AgriLearnNetwork@gmail.com"
+              class="email-link"
+              data-tooltip="AgriLearnNetwork@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a
+              id="inst"
+              href="https://www.instagram.com/your_username_here"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              id="twit"
+              href="https://twitter.com/your_username_here"
+              target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              id="fb"
+              href="https://www.facebook.com/your_page_or_profile_here"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>
+            <a href="../index.html"><p>Home</p></a>
+          </li>
+          <li>
+            <a href="../about/about.html"><p>About Us</p></a>
+          </li>
+          <li>
+            <a href="../blog/blogpage.html"><p>Blogs</p></a>
+          </li>
+          <li>
+            <a href="../index.html#Resource Library"><p>Resource Library</p></a>
+          </li>
+          <li>
+            <a href="../index.html#contact"><p>Contact Us</p></a>
+          </li>
+          <li>
+            <a href="../Contributors/contributor.html"><p>Contributor</p></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-text footer-right">
+        <p style="font-weight: 600; font-size: 15px">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          by AgriLearnNetwork | All Rights Reserved.
+          <span class="legal-page"
+            ><a href="../testimonials/termsandconditions.html"
+              >| Terms and Conditions</a
+            ></span
+          >
+          <span class="legal-page"
+            ><a href="../testimonials/privacypolicy.html"
+              >| Privacy Policy</a
+            ></span
+          >
+        </p>
+      </div>
+      <div class="cursor"></div>
+      <div class="cursor2"></div>
+    </footer>
+    <script src="./login.js"></script>
+    <script src="../script.js"></script>
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+      document.addEventListener("mousemove", function (e) {
+        cursor.style.cssText = cursor2.style.cssText =
+          "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+      });
+    </script>
+  </body>
+</html>
